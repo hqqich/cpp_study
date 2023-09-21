@@ -5,17 +5,17 @@
 
 using namespace std;
 
-int main(){
-    leveldb::DB* db;
+int main() {
+    leveldb::DB *db;
     leveldb::Options options;
     options.create_if_missing = true;
     //打开一个数据库
-    leveldb::Status status = leveldb::DB::Open(options,"./level.db",&db);
+    leveldb::Status status = leveldb::DB::Open(options, "./level.db", &db);
     int count = 0;
 
     //循环多次，不断添加内容
     while (count < 1000) {
-        std::stringstream keys ;
+        std::stringstream keys;
         std::string key;
         std::string value = "admin@tsinglink.com";
 
@@ -26,9 +26,9 @@ int main(){
 
         status = db->Get(leveldb::ReadOptions(), key, &value);//获取
         assert(status.ok());
-        std::cout<<value<<std::endl;
+        std::cout << value << std::endl;
 
-        count ++;
+        count++;
     }
 
     delete db; //关闭数据库
