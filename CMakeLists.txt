@@ -103,7 +103,16 @@ include_directories(${INC_DIR})
 link_directories(${LINK_DIR})
 
 
-add_executable(cpp_study main.cpp)
+add_executable(
+        # main 函数
+        cpp_study main.cpp
+
+        # levelDB 模块
+        util/leveldb/levelDB.cpp
+        util/leveldb/levelDB.h
+        util/jvm/java8JVM.cpp
+        util/jvm/java8JVM.h
+)
 
 
 #将第三方库连接在一起
