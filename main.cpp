@@ -10,6 +10,7 @@
 #include <libloaderapi.h>
 #include "util/leveldb/levelDB.h"
 #include "util/jvm/java8JVM.h"
+#include "util/jni/jniExec.h"
 
 
 using namespace std;
@@ -28,6 +29,9 @@ int main() {
 
 //    levelDB();
 
-    startJVM();
+//    startJVM();
+
+    test01();
+
     return 0;
 }

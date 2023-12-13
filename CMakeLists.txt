@@ -114,10 +114,15 @@ add_executable(
         # levelDB 模块
         util/leveldb/levelDB.cpp
         util/leveldb/levelDB.h
+
+        # 启动jvm
         util/jvm/java8JVM.cpp
         util/jvm/java8JVM.h
-)
 
+        # jni学习
+        util/jni/jniExec.cpp
+        util/jni/jniExec.h
+)
 
 #将第三方库连接在一起
 target_link_libraries(cpp_study libleveldb.a)

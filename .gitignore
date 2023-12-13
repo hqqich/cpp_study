@@ -3,3 +3,5 @@
 /Test.jar
 .idea
 /level.db/
+*.class
+file.txt
