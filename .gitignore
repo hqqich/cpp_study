@@ -1,1 +1,4 @@
 /cmake-build-debug/
+/jar/target/
+/Test.jar
+.idea
