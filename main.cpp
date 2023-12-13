@@ -15,24 +15,24 @@
 using namespace std;
 
 
-int _tmain(int argc, _TCHAR *argv[]) {
+void setWinConsleUTF8() {
+    SetConsoleOutputCP(65001);
+    SetConsoleCP(65001);
+    setlocale(LC_ALL, "");
+}
+
+//int _tmain(int argc, _TCHAR *argv[]) {
+//
+////    levelDB();
+//
+//    startJVM();
+//    return 0;
+//}
+
+int main() {
 
 //    levelDB();
 
-    cout << "Application run." << endl;
     startJVM();
     return 0;
 }
-
-
-
-/*
-int main() {
-
-
-    cout << "Application run." << endl;
-    startJVM();
-    return 0;
-
-}
-*/

@@ -56,7 +56,7 @@ bool startJVM() {
     //加载JVM,注意需要传入的字符串为LPCWSTR,指向一个常量Unicode字符串的32位指针，相当于const wchar_t*
     HINSTANCE jvmDLL = LoadLibrary(jvmPath);
     if (jvmDLL == NULL) {
-        cout << "89:加载JVM动态库错误" << endl;
+        cout << "加载JVM动态库错误" << endl;
         return false;
     }
 

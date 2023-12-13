@@ -91,6 +91,10 @@ set(CMAKE_CXX_STANDARD 17)
 #target_link_libraries(cpp_study ${OpenCV_LIBS})
 #target_link_libraries(cpp_study opencv_world460 opencv_world460d)
 
+# 下面一行是解决中文乱码，
+# c++在cmakelist.txt添加set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fexec-charset=GBK")
+# c语言在cmakelist.txt添加CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fexec-charset=GBK"
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fexec-charset=GBK")
 
 
 #设置头文件路径
