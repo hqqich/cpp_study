@@ -2,10 +2,11 @@
 #include <iostream>
 #include <sstream>
 #include "leveldb/db.h"
+#include "jni.h"
 
 using namespace std;
 
-int main() {
+void levelDB() {
     leveldb::DB *db;
     leveldb::Options options;
     options.create_if_missing = true;
@@ -26,12 +27,27 @@ int main() {
 
         status = db->Get(leveldb::ReadOptions(), key, &value);//获取
         assert(status.ok());
+        std::cout << key << std::endl;
         std::cout << value << std::endl;
 
         count++;
     }
 
     delete db; //关闭数据库
+}
 
+void string_use() {
+    const char *a = "abc";
+    // 使用strlen获取字符串长度
+    int length = strlen(a);
+    printf("%s, %d", a, length);
+}
+
+
+
+
+
+int main() {
+    string_use();
     return 0;
 }
